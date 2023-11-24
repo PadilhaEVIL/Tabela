@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Oleo Sesi Senai</title>
+</head>
+
+<body id="corpo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p></p>
+                <h3 class="text-center">
+                    Cadastro de Alunos
+                </h3>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>
+                                Matricula
+                            </th>
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Turma
+                            </th>
+                            <th>
+                                Sobre
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="alunosTab"></tbody>
+                    </tbody>
+                </table>
+                <!-- Botão Novo Cliente -->
+                <div class="text-center">
+                    <button class="btn btn-primary" id="btnNovoAluno">Novo Aluno</button>
+                </div>
+
+                <!-- Modal Novo Cliente -->
+                <div id="modalNovoAluno" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Cadastrar Novo Aluno</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formNovoAluno">
+                                <label >Matrícula:</label>
+                                <input type="number" id="alo" required>
+
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" required>
+
+                                <label for="turma">Turma:</label>
+                                <input type="text" id="turma" required>
+                                <button type="button" onclick="cadastrarAluno()">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal de Informações do Cliente -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Informações do Aluno</h2>
+                        <p>Placa: <span id="matriculaModal"></span></p>
+                        <p>Nome: <span id="nomeModal"></span></p>
+                        <p>Turma: <span id="turmaModal"></span></p>
+                        <button id="btnExcluirCliente">Excluir Aluno</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
